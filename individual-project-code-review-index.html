@@ -15,6 +15,9 @@
     a { color: #1f5f8b; text-decoration: none; }
     a:hover { text-decoration: underline; }
     code { background: #f0f3f7; border: 1px solid #dde3ec; border-radius: 4px; padding: 1px 5px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 22px; font-size: 14px; }
+    th, td { border: 1px solid #d9dee7; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #eef2f6; }
     @media (max-width: 700px) { ul { columns: 1; } }
   </style>
 </head>
@@ -23,6 +26,20 @@
   <section>
     <h1>Individual Project Code Review Reports</h1>
     <p>Generated 2026-05-31. Each report is standalone and saved in <code>Code-Review</code>.</p>
+
+
+    <h2>SOLID Review Summary</h2>
+    <p>Static design grouping based on project structure, class/module size, and dependency boundaries. See each report for the per-project SOLID notes.</p>
+    <table>
+      <thead><tr><th>Dominant Design Risk</th><th>Projects</th><th>Count</th></tr></thead>
+      <tbody><tr><td>Frontend component-size risk</td><td><a href="corpadm-esp-code-review.html">corpadm-esp</a>, <a href="corpadm-sysadm-code-review.html">corpadm-sysadm</a>, <a href="web-portal-code-review.html">web-portal</a></td><td>3</td></tr><tr><td>Backend layered, large-service risk</td><td><a href="comm-log-code-review.html">comm-log</a>, <a href="comm-noti-code-review.html">comm-noti</a>, <a href="corpbkd-author-code-review.html">corpbkd-author</a>, <a href="corpbkd-cmain-code-review.html">corpbkd-cmain</a>, <a href="corpbkd-onbrd-code-review.html">corpbkd-onbrd</a>, <a href="corpbkd-scate-code-review.html">corpbkd-scate</a>, <a href="corpbkd-umain-code-review.html">corpbkd-umain</a>, <a href="corpesp-conf-code-review.html">corpesp-conf</a>, <a href="corpsap-cmain-code-review.html">corpsap-cmain</a>, <a href="corpsap-emain-code-review.html">corpsap-emain</a>, <a href="peserv-comp-code-review.html">peserv-comp</a>, <a href="peserv-digisign-code-review.html">peserv-digisign</a>, <a href="peserv-encdec-code-review.html">peserv-encdec</a></td><td>13</td></tr><tr><td>OAuth/protocol orchestration risk</td><td><a href="corpbkd-oauth-code-review.html">corpbkd-oauth</a>, <a href="corpesp-oauth-code-review.html">corpesp-oauth</a>, <a href="corpsap-oauth-code-review.html">corpsap-oauth</a>, <a href="eserv-oauth-code-review.html">eserv-oauth</a></td><td>4</td></tr><tr><td>External-interface orchestration risk</td><td><a href="intf-crird-code-review.html">intf-crird</a>, <a href="intf-eproof-code-review.html">intf-eproof</a>, <a href="intf-iamint-code-review.html">intf-iamint</a>, <a href="intf-idone-code-review.html">intf-idone</a>, <a href="intf-intgport-code-review.html">intf-intgport</a>, <a href="intf-rca-code-review.html">intf-rca</a>, <a href="intf-sbp-code-review.html">intf-sbp</a></td><td>7</td></tr><tr><td>Shared framework abstraction risk</td><td><a href="corpid-sdk-code-review.html">corpid-sdk</a></td><td>1</td></tr><tr><td>Not assessable from source tree</td><td><a href="gcis-noti-code-review.html">gcis-noti</a></td><td>1</td></tr></tbody>
+    </table>
+    <h2>Unit Testing Summary</h2>
+    <p>Static scan only: I checked local test projects, frontend package scripts, and coverage tooling. Tests were not executed and coverage percentages were not generated.</p>
+    <table>
+      <thead><tr><th>Status</th><th>Projects</th><th>Count</th></tr></thead>
+      <tbody><tr><td>Present</td><td><a href="comm-log-code-review.html">comm-log</a>, <a href="eserv-oauth-code-review.html">eserv-oauth</a>, <a href="peserv-digisign-code-review.html">peserv-digisign</a>, <a href="peserv-encdec-code-review.html">peserv-encdec</a></td><td>4</td></tr><tr><td>Scaffold only</td><td><a href="eserv-encdec-code-review.html">eserv-encdec</a>, <a href="peserv-comp-code-review.html">peserv-comp</a></td><td>2</td></tr><tr><td>No automated tests found</td><td><a href="comm-noti-code-review.html">comm-noti</a>, <a href="corpadm-esp-code-review.html">corpadm-esp</a>, <a href="corpadm-sysadm-code-review.html">corpadm-sysadm</a>, <a href="corpbkd-author-code-review.html">corpbkd-author</a>, <a href="corpbkd-cmain-code-review.html">corpbkd-cmain</a>, <a href="corpbkd-oauth-code-review.html">corpbkd-oauth</a>, <a href="corpbkd-onbrd-code-review.html">corpbkd-onbrd</a>, <a href="corpbkd-scate-code-review.html">corpbkd-scate</a>, <a href="corpbkd-umain-code-review.html">corpbkd-umain</a>, <a href="corpesp-conf-code-review.html">corpesp-conf</a>, <a href="corpesp-oauth-code-review.html">corpesp-oauth</a>, <a href="corpid-sdk-code-review.html">corpid-sdk</a>, <a href="corpsap-cmain-code-review.html">corpsap-cmain</a>, <a href="corpsap-emain-code-review.html">corpsap-emain</a>, <a href="corpsap-oauth-code-review.html">corpsap-oauth</a>, <a href="intf-crird-code-review.html">intf-crird</a>, <a href="intf-eproof-code-review.html">intf-eproof</a>, <a href="intf-iamint-code-review.html">intf-iamint</a>, <a href="intf-idone-code-review.html">intf-idone</a>, <a href="intf-intgport-code-review.html">intf-intgport</a>, <a href="intf-sbp-code-review.html">intf-sbp</a>, <a href="web-portal-code-review.html">web-portal</a></td><td>22</td></tr><tr><td>Manual/test data only</td><td><a href="intf-rca-code-review.html">intf-rca</a></td><td>1</td></tr><tr><td>Not assessable from source tree</td><td><a href="gcis-noti-code-review.html">gcis-noti</a></td><td>1</td></tr></tbody>
+    </table>
     <ul>
 <li><a href="comm-log-code-review.html">comm-log</a></li>
 <li><a href="comm-noti-code-review.html">comm-noti</a></li>
